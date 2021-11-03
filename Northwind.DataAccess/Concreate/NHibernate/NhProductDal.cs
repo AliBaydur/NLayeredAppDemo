@@ -1,4 +1,5 @@
 ﻿using Northwind.DataAccess.Abstract;
+using Northwind.Entities.Abstract;
 using Northwind.Entities.Concreate;
 using System;
 using System.Collections.Generic;
@@ -19,13 +20,15 @@ namespace Northwind.DataAccess.Concreate.NHibernate
         {
             throw new NotImplementedException();
         }
+     
 
-        public Product Get(int id)
+        public Product Get(Experession<Func<Product, bool>> filter)
         {
             throw new NotImplementedException();
         }
+       
 
-        public List<Product> GetAll()
+        public List<Product> GetAll(Experession<Func<Product, bool>> filter = null)
         {
             List<Product> products = new List<Product>
             {

@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Northwind.Business.Abstract
+namespace Northwind.DataAccess.Abstract
 {
-    public interface IProductService
+    public interface ICategoryDal:IEntityRepository<Category>
     {
-
     }
 }
